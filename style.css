@@ -254,3 +254,56 @@ opacity:0;
 transform:scale(2);
 }
 }
+.monogram{
+
+font-family:Cinzel;
+font-size:24px;
+letter-spacing:10px;
+color:#b67972;
+
+}
+
+.subtitle{
+
+font-family:"Great Vibes";
+font-size:38px;
+color:#c08b83;
+margin:20px 0;
+
+}
+
+.divider{
+
+width:80px;
+height:2px;
+background:#c89a8b;
+margin:25px auto;
+
+}
+
+.couple{
+
+font-family:Cinzel;
+font-size:28px;
+font-weight:400;
+margin-top:20px;
+
+}
+
+.couple span{
+
+font-family:"Great Vibes";
+font-size:55px;
+color:#a8656d;
+
+}
+
+.welcome{
+
+max-width:500px;
+margin:30px auto;
+line-height:2;
+font-size:17px;
+color:#7d6262;
+
+}
