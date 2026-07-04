@@ -185,3 +185,72 @@ padding:25px;
 }
 
 }
+/* Countdown */
+
+.timer{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.timer div{
+background:white;
+padding:20px;
+border-radius:18px;
+min-width:90px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.timer span{
+font-size:32px;
+font-weight:bold;
+display:block;
+color:#b67a70;
+}
+
+.timer small{
+letter-spacing:1px;
+}
+
+
+/* Floating Flowers */
+
+.flower{
+position:fixed;
+top:-50px;
+animation:fall linear infinite;
+pointer-events:none;
+z-index:999;
+}
+
+@keyframes fall{
+
+to{
+transform:translateY(120vh) rotate(360deg);
+}
+
+}
+
+/* Sparkles */
+
+.sparkle{
+position:fixed;
+pointer-events:none;
+font-size:18px;
+animation:spark 2.5s linear;
+}
+
+@keyframes spark{
+
+0%{
+opacity:1;
+transform:scale(.5);
+}
+
+100%{
+opacity:0;
+transform:scale(2);
+}
+}
