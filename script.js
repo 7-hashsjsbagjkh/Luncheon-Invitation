@@ -8,7 +8,7 @@ enterBtn.addEventListener("click", () => {
     document.querySelector(".details").scrollIntoView({
         behavior: "smooth"
     });
-}); l
+}); 
 
 // =======================
 // Countdown
