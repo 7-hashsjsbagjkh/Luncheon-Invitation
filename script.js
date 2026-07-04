@@ -1,14 +1,18 @@
 // Open Invitation
-const enterBtn = document.getElementById("enter");
+ const enterBtn = document.getElementById("enter");
 const music = document.getElementById("bgMusic");
 
 enterBtn.addEventListener("click", () => {
-    music.play();
+    music.currentTime = 0;
+
+    music.play().catch(error => {
+        console.log("Music couldn't play:", error);
+    });
 
     document.querySelector(".details").scrollIntoView({
         behavior: "smooth"
     });
-}); 
+});
 
 // =======================
 // Countdown
