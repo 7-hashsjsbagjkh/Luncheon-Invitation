@@ -15,18 +15,32 @@ envelope.addEventListener("click", () => {
     }, 1500);
 
     setTimeout(() => {
-
         screen.style.display = "none";
-
         invitation.style.display = "block";
-
         invitation.style.animation = "fadeUp 1.5s";
-
-        music.play().catch(()=>{});
-
+        music.play().catch(() => {});
     }, 2200);
 
 });
+
+function createPetals() {
+
+    for (let i = 0; i < 35; i++) {
+
+        const petal = document.createElement("div");
+
+        petal.className = "petal";
+        petal.innerHTML = "🌸";
+        petal.style.left = Math.random() * 100 + "vw";
+        petal.style.animationDuration = (3 + Math.random() * 3) + "s";
+        petal.style.fontSize = (16 + Math.random() * 20) + "px";
+
+        document.body.appendChild(petal);
+
+        setTimeout(() => petal.remove(), 6000);
+    }
+
+}
 function createPetals(){
 
     for(let i=0;i<35;i++){
