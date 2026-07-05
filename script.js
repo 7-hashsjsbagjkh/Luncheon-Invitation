@@ -153,3 +153,45 @@ spark.remove();
 },2500);
 
 },700);
+.envelope{
+overflow:hidden;
+}
+
+.flap{
+transform-origin:top;
+transition:1s;
+z-index:5;
+}
+
+.letter{
+position:absolute;
+left:5%;
+top:12%;
+transition:1s;
+z-index:2;
+}
+
+.seal{
+transition:1s;
+z-index:10;
+}
+
+.envelope.open .seal{
+
+transform:translate(-50%,-50%) scale(0);
+
+opacity:0;
+
+}
+
+.envelope.open .flap{
+
+transform:rotateX(180deg);
+
+}
+
+.envelope.open .letter{
+
+top:-90px;
+
+}
