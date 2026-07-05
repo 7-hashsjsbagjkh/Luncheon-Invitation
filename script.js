@@ -1,17 +1,31 @@
 // Open Invitation
- const enterBtn = document.getElementById("enter");
+const envelope = document.querySelector(".envelope");
+const invitation = document.getElementById("invitation");
+const screen = document.getElementById("envelopeScreen");
 const music = document.getElementById("bgMusic");
 
-enterBtn.addEventListener("click", () => {
-    music.currentTime = 0;
+envelope.addEventListener("click", () => {
 
-    music.play().catch(error => {
-        console.log("Music couldn't play:", error);
-    });
+    envelope.classList.add("open");
 
-    document.querySelector(".details").scrollIntoView({
-        behavior: "smooth"
-    });
+    setTimeout(() => {
+
+        screen.style.opacity = "0";
+
+    }, 1200);
+
+    setTimeout(() => {
+
+        screen.style.display = "none";
+
+        invitation.style.display = "block";
+
+        invitation.style.animation = "fadeUp 1.5s";
+
+        music.play().catch(()=>{});
+
+    }, 1800);
+
 });
 
 // =======================
