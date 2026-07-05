@@ -1,3 +1,7 @@
+/* ===========================
+   RESET
+=========================== */
+
 *{
 margin:0;
 padding:0;
@@ -9,372 +13,88 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Poppins,sans-serif;
-background:#fff8f8;
-color:#6d4c52;
+font-family:'Poppins',sans-serif;
+background:#FFF9F8;
+color:#6b5555;
 overflow-x:hidden;
 }
 
-/* HERO */
+/* ===========================
+   LOADER
+=========================== */
 
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(255,255,255,.55),
-rgba(255,255,255,.65)),
-url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80");
-
-background-size:cover;
-background-position:center;
+#loader{
+position:fixed;
+inset:0;
+background:#FFF9F8;
 display:flex;
 justify-content:center;
 align-items:center;
-text-align:center;
+z-index:99999;
+transition:1s;
 }
 
-.overlay{
-padding:40px;
-background:rgba(255,255,255,.75);
-backdrop-filter:blur(12px);
-border-radius:25px;
-width:90%;
-max-width:550px;
-box-shadow:0 20px 50px rgba(0,0,0,.12);
-animation:fadeUp 1.5s ease;
-}
-
-.overlay h3{
-font-family:Cinzel;
-letter-spacing:8px;
-font-size:18px;
-color:#b67a70;
-margin-bottom:20px;
-}
-
-.overlay h1{
-font-family:"Great Vibes";
+#loader h1{
+font-family:'Cinzel',serif;
 font-size:64px;
-color:#8d5d63;
-line-height:1.2;
-}
-
-.tagline{
-margin:20px 0;
-font-size:18px;
-font-style:italic;
-color:#9a7b80;
-}
-
-button{
-margin-top:25px;
-padding:16px 42px;
-border:none;
-border-radius:50px;
-background:linear-gradient(45deg,#d79ba7,#b67a70);
-color:white;
-font-size:17px;
-cursor:pointer;
-transition:.35s;
-}
-
-button:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(182,122,112,.4);
-}
-
-/* SECTIONS */
-
-section{
-padding:90px 10%;
-text-align:center;
-}
-
-section h2{
-font-family:Cinzel;
-font-size:34px;
-margin-bottom:25px;
-color:#9b6d73;
-}
-
-section h3{
-font-family:"Great Vibes";
-font-size:42px;
-font-weight:normal;
+letter-spacing:12px;
 color:#b67a70;
+animation:glow 2s infinite alternate;
 }
 
-.details p{
-line-height:1.9;
-font-size:18px;
+@keyframes glow{
+
+from{
+opacity:.6;
+transform:scale(.95);
 }
 
-.card{
-margin:40px auto;
-background:white;
-padding:35px;
-border-radius:22px;
-max-width:550px;
-box-shadow:0 15px 35px rgba(0,0,0,.08);
-}
-
-.card p{
-margin:18px 0;
-}
-
-a{
-display:inline-block;
-margin-top:20px;
-padding:16px 40px;
-background:linear-gradient(45deg,#d79ba7,#b67a70);
-color:white;
-text-decoration:none;
-border-radius:50px;
-transition:.35s;
-}
-
-a:hover{
+to{
+opacity:1;
 transform:scale(1.05);
 }
 
-/* Animation */
-
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(40px);
 }
 
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-section{
-animation:fadeUp 1s ease;
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-.overlay h1{
-font-size:48px;
-}
-
-.overlay{
-padding:30px;
-}
-
-section{
-padding:70px 8%;
-}
-
-section h2{
-font-size:28px;
-}
-
-section h3{
-font-size:34px;
-}
-
-.card{
-padding:25px;
-}
-
-}
-/* Countdown */
-
-.timer{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.timer div{
-background:white;
-padding:20px;
-border-radius:18px;
-min-width:90px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
-.timer span{
-font-size:32px;
-font-weight:bold;
-display:block;
-color:#b67a70;
-}
-
-.timer small{
-letter-spacing:1px;
-}
-
-
-/* Floating Flowers */
-
-.flower{
-position:fixed;
-top:-50px;
-animation:fall linear infinite;
-pointer-events:none;
-z-index:999;
-}
-
-@keyframes fall{
-
-to{
-transform:translateY(120vh) rotate(360deg);
-}
-
-}
-
-/* Sparkles */
-
-.sparkle{
-position:fixed;
-pointer-events:none;
-font-size:18px;
-animation:spark 2.5s linear;
-}
-
-@keyframes spark{
-
-0%{
-opacity:1;
-transform:scale(.5);
-}
-
-100%{
-opacity:0;
-transform:scale(2);
-}
-}
-.monogram{
-
-font-family:Cinzel;
-font-size:24px;
-letter-spacing:10px;
-color:#b67972;
-
-}
-
-.subtitle{
-
-font-family:"Great Vibes";
-font-size:38px;
-color:#c08b83;
-margin:20px 0;
-
-}
-
-.divider{
-
-width:80px;
-height:2px;
-background:#c89a8b;
-margin:25px auto;
-
-}
-
-.couple{
-
-font-family:Cinzel;
-font-size:28px;
-font-weight:400;
-margin-top:20px;
-
-}
-
-.couple span{
-
-font-family:"Great Vibes";
-font-size:55px;
-color:#a8656d;
-
-}
-
-.welcome{
-
-max-width:500px;
-margin:30px auto;
-line-height:2;
-font-size:17px;
-color:#7d6262;
-
-}
-#invitation{
-display:none;
-}
+/* ===========================
+   ENVELOPE SCREEN
+=========================== */
 
 #envelopeScreen{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100vh;
-background:#fff8f8;
+inset:0;
+background:linear-gradient(180deg,#fffdfc,#fdeeee);
 display:flex;
 justify-content:center;
 align-items:center;
-z-index:9999;
-}
-.petal{
-
-position:fixed;
-
-top:-50px;
-
-pointer-events:none;
-
-z-index:99999;
-
-animation:petalFall linear forwards;
-
+z-index:9998;
+transition:1s;
 }
 
-@keyframes petalFall{
+/* ===========================
+   ENVELOPE
+=========================== */
 
-0%{
-
-transform:translateY(-50px) rotate(0deg);
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateY(110vh) rotate(720deg);
-
-opacity:0;
-
-}
-
-}
 .envelope{
 position:relative;
 width:340px;
 height:240px;
-background:white;
+background:#fff;
 border-radius:12px;
 overflow:hidden;
-box-shadow:
-0 35px 80px rgba(0,0,0,.18),
-0 0 35px rgba(201,153,145,.35);
 cursor:pointer;
+box-shadow:
+0 25px 70px rgba(0,0,0,.15),
+0 0 40px rgba(214,175,165,.3);
 }
 
 .flap{
 position:absolute;
 top:0;
+left:0;
 width:100%;
 height:120px;
-background:#f4d9d5;
+background:#f5d9d3;
 clip-path:polygon(0 0,100% 0,50% 100%);
 transform-origin:top;
 transition:1s;
@@ -383,52 +103,53 @@ z-index:5;
 
 .letter{
 position:absolute;
-width:90%;
-height:85%;
 left:5%;
 top:12%;
+width:90%;
+height:85%;
 background:white;
-border-radius:8px;
+border-radius:10px;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-flex-direction:column;
 text-align:center;
+padding:20px;
 transition:1s;
 z-index:2;
 }
 
-.seal{
-position:absolute;
-width:82px;
-height:82px;
-background:radial-gradient(circle,#c88b84,#9f615d);
-border:3px solid #e8c6ba;
-border-radius:50%;
-left:50%;
-top:45%;
-transform:translate(-50%,-50%);
-display:flex;
-justify-content:center;
-align-items:center;
-font-family:Cinzel;
-font-weight:bold;
-color:white;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-transition:1s;
-z-index:10;
+.monogram{
+font-family:'Cinzel',serif;
+letter-spacing:8px;
+font-size:22px;
+color:#b67a70;
 }
 
-.envelope.open .seal{
-transform:translate(-50%,-50%) scale(1.4) rotate(25deg);
-opacity:0;
-filter:blur(4px);
+.letter h1{
+font-family:'Great Vibes',cursive;
+font-size:48px;
+color:#9d6665;
+margin-top:10px;
 }
 
-.envelope.open .flap{
-transform:rotateX(180deg);
+.letter h2{
+font-family:'Great Vibes',cursive;
+font-size:42px;
+color:#b67a70;
+margin-top:-8px;
 }
 
-.envelope.open .letter{
-top:-90px;
+.subtitle{
+margin-top:15px;
+font-family:'Cinzel',serif;
+letter-spacing:3px;
+font-size:15px;
+color:#9f7b7b;
 }
+
+.divider{
+width:80px;
+height:2px;
+background:#c89b90;
+margin:18
