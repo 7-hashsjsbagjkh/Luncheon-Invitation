@@ -1,237 +1,90 @@
-// Open Invitation
+// LOADER
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        document.getElementById("loader").style.opacity = "0";
+
+        setTimeout(() => {
+
+            document.getElementById("loader").style.display = "none";
+
+        }, 800);
+
+    }, 1200);
+
+});
+
+// OPEN ENVELOPE
+
 const envelope = document.querySelector(".envelope");
 const invitation = document.getElementById("invitation");
-const screen = document.getElementById("envelopeScreen");
+const envelopeScreen = document.getElementById("envelopeScreen");
 const music = document.getElementById("bgMusic");
 
 envelope.addEventListener("click", () => {
 
     envelope.classList.add("open");
 
-    createPetals();
-
     setTimeout(() => {
-        screen.style.opacity = "0";
-    }, 1500);
 
-    setTimeout(() => {
-        screen.style.display = "none";
+        envelopeScreen.style.display = "none";
+
         invitation.style.display = "block";
-        invitation.style.animation = "fadeUp 1.5s";
-        music.play().catch(() => {});
-    }, 2200);
+
+        music.play().catch(()=>{});
+
+        startPetals();
+
+    },1500);
 
 });
 
-function createPetals() {
+// COUNTDOWN
 
-    for (let i = 0; i < 35; i++) {
-
-        const petal = document.createElement("div");
-
-        petal.className = "petal";
-        petal.innerHTML = "🌸";
-        petal.style.left = Math.random() * 100 + "vw";
-        petal.style.animationDuration = (3 + Math.random() * 3) + "s";
-        petal.style.fontSize = (16 + Math.random() * 20) + "px";
-
-        document.body.appendChild(petal);
-
-        setTimeout(() => petal.remove(), 6000);
-    }
-
-}
-function createPetals(){
-
-    for(let i=0;i<35;i++){
-
-        const petal=document.createElement("div");
-
-        petal.className="petal";
-
-        petal.innerHTML="🌸";
-
-        petal.style.left=Math.random()*100+"vw";
-
-        petal.style.animationDuration=(3+Math.random()*3)+"s";
-
-        petal.style.fontSize=(16+Math.random()*20)+"px";
-
-        document.body.appendChild(petal);
-
-        setTimeout(()=>{
-
-            petal.remove();
-
-        },6000);
-
-    }
-
-}
-// =======================
-// Countdown
-// =======================
-
-const weddingDate = new Date("July 21, 2026 10:00:00").getTime();
-
-const countdown = document.createElement("section");
-countdown.className = "countdown";
-
-countdown.innerHTML = `
-<h2>Countdown</h2>
-
-<div class="timer">
-<div><span id="days">0</span><small>Days</small></div>
-<div><span id="hours">0</span><small>Hours</small></div>
-<div><span id="minutes">0</span><small>Minutes</small></div>
-<div><span id="seconds">0</span><small>Seconds</small></div>
-</div>
-`;
-
-document.querySelector(".details").after(countdown);
-
-setInterval(function(){
-
-const now = new Date().getTime();
-
-const distance = weddingDate-now;
-
-const days=Math.floor(distance/(1000*60*60*24));
-
-const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
-
-const seconds=Math.floor((distance%(1000*60))/1000);
-
-document.getElementById("days").innerHTML=days;
-document.getElementById("hours").innerHTML=hours;
-document.getElementById("minutes").innerHTML=minutes;
-document.getElementById("seconds").innerHTML=seconds;
-
-},1000);
-
-
-// =======================
-// Fade Animation
-// =======================
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity=1;
-
-entry.target.style.transform="translateY(0)";
-
-}
-
-});
-
-});
-
-document.querySelectorAll("section").forEach(sec=>{
-
-sec.style.opacity=0;
-
-sec.style.transform="translateY(80px)";
-
-sec.style.transition="1s";
-
-observer.observe(sec);
-
-});
-
-
-// =======================
-// Floating Petals
-// =======================
-
-for(let i=0;i<25;i++){
-
-const flower=document.createElement("div");
-
-flower.innerHTML="🌸";
-
-flower.className="flower";
-
-flower.style.left=Math.random()*100+"vw";
-
-flower.style.animationDuration=8+Math.random()*10+"s";
-
-flower.style.fontSize=16+Math.random()*18+"px";
-
-document.body.appendChild(flower);
-
-}
-
-
-// =======================
-// Sparkles
-// =======================
+const eventDate = new Date("July 21, 2026 10:00:00").getTime();
 
 setInterval(()=>{
 
-const spark=document.createElement("div");
+const now = new Date().getTime();
 
-spark.className="sparkle";
+const distance = eventDate - now;
 
-spark.innerHTML="✨";
+const days = Math.floor(distance/(1000*60*60*24));
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+const seconds = Math.floor((distance%(1000*60))/1000);
 
-spark.style.left=Math.random()*100+"vw";
+document.getElementById("days").textContent = days;
+document.getElementById("hours").textContent = hours;
+document.getElementById("minutes").textContent = minutes;
+document.getElementById("seconds").textContent = seconds;
 
-spark.style.top=Math.random()*100+"vh";
+},1000);
 
-document.body.appendChild(spark);
+// PETALS
+
+function startPetals(){
+
+setInterval(()=>{
+
+const petal = document.createElement("div");
+
+petal.innerHTML="🌸";
+
+petal.style.position="fixed";
+petal.style.left=Math.random()*100+"vw";
+petal.style.top="-40px";
+petal.style.fontSize=(18+Math.random()*18)+"px";
+petal.style.transition="transform 8s linear, opacity 8s";
+petal.style.zIndex="999";
+
+document.body.appendChild(petal);
 
 setTimeout(()=>{
 
-spark.remove();
+petal.style.transform="translateY(110vh) rotate(360deg)";
+petal.style.opacity="0";
 
-},2500);
-
-},700);
-.envelope{
-overflow:hidden;
-}
-
-.flap{
-transform-origin:top;
-transition:1s;
-z-index:5;
-}
-
-.letter{
-position:absolute;
-left:5%;
-top:12%;
-transition:1s;
-z-index:2;
-}
-
-.seal{
-transition:1s;
-z-index:10;
-}
-
-.envelope.open .seal{
-
-transform:translate(-50%,-50%) scale(0);
-
-opacity:0;
-
-}
-
-.envelope.open .flap{
-
-transform:rotateX(180deg);
-
-}
-
-.envelope.open .letter{
-
-top:-90px;
-
-}
+},50
