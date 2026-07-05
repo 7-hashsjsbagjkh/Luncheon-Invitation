@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>B & L | Bridal Brunch & Luncheon</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<!-- Splash Screen -->
+
+<div id="loader">
+
+<h1>B & L</h1>
+
+</div>
+
+<!-- Envelope Screen -->
 
 <div id="envelopeScreen">
+
+<div class="sparkles"></div>
 
 <div class="envelope">
 
@@ -22,122 +38,251 @@
 
 <div class="letter">
 
-<h2>B & L</h2>
-
-<p>Bridal Brunch<br>& Luncheon</p>
-
-<span>Tap to Open</span>
-
-</div>
-
-<div class="seal">B & L</div>
-
-</div>
-
-</div>
-
-<div id="invitation">
-
-<div class="hero">
-
-<div class="overlay">
-
 <p class="monogram">B & L</p>
 
-<h1>Bridal Brunch<br>& Luncheon</h1>
+<h1>Bridal Brunch</h1>
+
+<h2>& Luncheon</h2>
 
 <p class="subtitle">Before Forever</p>
 
 <div class="divider"></div>
 
-<h2 class="couple">
-Hosted with Love by<br>
-<span>Uzma & Memoona</span>
-</h2>
+<p class="hosted">Hosted with Love</p>
 
-<p class="welcome">
-You are warmly invited to an elegant afternoon of love, laughter, and cherished memories before a beautiful new chapter begins.
-</p>
+<h3>Uzma & Memoona</h3>
 
-<button id="enter">
-Begin
+<button id="unsealBtn">
+Tap to Unseal
 </button>
 
-</div> <!-- overlay -->
-</div> <!-- hero -->
-</div> <!-- invitation -->
+</div>
+
+<div class="seal">
+B & L
+</div>
+
+</div>
+
+</div>
+
+<!-- Invitation -->
+
+<div id="invitation">
+
+<section class="hero">
+
+<div class="glass">
+
+<p class="welcomeTitle">
+You're Invited
+</p>
+
+<h1>
+Bridal Brunch
+& Luncheon
+</h1>
+
+<p class="heroText">
+
+With hearts full of joy, we invite you to an elegant afternoon filled with laughter, warmth, and cherished moments before a beautiful new chapter begins.
+
+</p>
+
+</div>
+
+</section><!-- Event Details -->
 
 <section class="details">
 
-<h2>Ladies Only</h2>
+<h2>An Afternoon to Remember</h2>
 
-<p>
-Join us for a graceful afternoon filled with laughter, heartfelt conversations, and beautiful memories as we gather for one final celebration before a beautiful new chapter begins.
+<p class="intro">
+Join us for a graceful afternoon of elegance, laughter, and heartfelt moments as we gather for one final celebration before a beautiful new beginning.
 </p>
 
-<div class="card">
+<div class="detailCard">
 
-<p>📅 Tuesday, 21 July 2026</p>
+<div class="detail">
+<span>📅</span>
+<p>Tuesday<br>21 July 2026</p>
+</div>
 
-<p>🕙 10:00 AM – 4:00 PM</p>
-
-<p>📍 Khan Haveli (Kajoor Wala Ghar)<br>
-Hayyal Sharif</p>
-
-<p>🤍 Dress Code: White</p>
+<div class="detail">
+<span>🕙</span>
+<p>10:00 AM<br>4:00 PM</p>
+</div>
 
 </div>
 
 </section>
 
-<section class="hosts">
+<!-- Scratch Cards -->
 
-<h2>Hosted with Love</h2>
+<section class="scratchSection">
 
-<h3>Uzma & Memoona</h3>
+<h2>A Few Little Secrets</h2>
 
-<br>
+<p>Scratch each card to reveal the details.</p>
 
-<h2>Event Host</h2>
+<div class="scratchGrid">
 
-<h3>Hareem</h3>
+<div class="scratchCard">
+<h3>🤍 Dress Code</h3>
+<div class="scratchArea" id="dressCode">
+Scratch to Reveal
+</div>
+</div>
 
-<br>
+<div class="scratchCard">
+<h3>📍 Venue</h3>
+<div class="scratchArea" id="venue">
+Scratch to Reveal
+</div>
+</div>
 
-<h2>Photography Courtesy Of</h2>
+<div class="scratchCard">
+<h3>💌 A Little Note</h3>
+<div class="scratchArea" id="message">
+Scratch to Reveal
+</div>
+</div>
 
-<h3>Harmain</h3>
+</div>
 
 </section>
 
-<section class="rsvp">
+<!-- Countdown -->
 
-<h2>RSVP</h2>
+<section class="countdown">
 
-<a href="https://wa.me/923352455577">
-WhatsApp Us
-</a>
+<h2>Counting Down</h2>
+
+<div class="timer">
+
+<div>
+<span id="days">00</span>
+<small>Days</small>
+</div>
+
+<div>
+<span id="hours">00</span>
+<small>Hours</small>
+</div>
+
+<div>
+<span id="minutes">00</span>
+<small>Minutes</small>
+</div>
+
+<div>
+<span id="seconds">00</span>
+<small>Seconds</small>
+</div>
+
+</div>
+
+</section><!-- Gallery -->
+
+<section class="gallery">
+
+<h2>Moments</h2>
+
+<div class="galleryGrid">
+
+<img src="images/photo1.jpg" alt="Photo 1">
+
+<img src="images/photo2.jpg" alt="Photo 2">
+
+<img src="images/photo3.jpg" alt="Photo 3">
+
+<img src="images/photo4.jpg" alt="Photo 4">
+
+</div>
 
 </section>
+
+<!-- Location -->
 
 <section class="location">
 
 <h2>Venue</h2>
 
-<a href="https://maps.google.com/?q=33.5404378,73.0068601">
+<p>
+Khan Haveli<br>
+(Kajoor Wala Ghar)<br>
+Hayyal Sharif
+</p>
+
+<a class="mapBtn"
+href="https://maps.google.com/?q=33.5404378,73.0068601"
+target="_blank">
 
 Get Directions
 
 </a>
 
 </section>
-  </div> <!-- invitation -->
-  
-<audio id="bgMusic" loop preload="auto">
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
-  
-<script src="script.js"></script>
 
-</body>
-</html>
+<!-- RSVP -->
+
+<section class="rsvp">
+
+<h2>Kindly RSVP</h2>
+
+<a class="rsvpBtn"
+href="https://wa.me/923352455577">
+
+WhatsApp
+
+</a>
+
+</section>
+
+<!-- Credits -->
+
+<section class="credits">
+
+<div>
+
+<h3>Hosted with Love</h3>
+
+<p>Uzma & Memoona</p>
+
+</div>
+
+<div>
+
+<h3>Event Host</h3>
+
+<p>Hareem</p>
+
+</div>
+
+<div>
+
+<h3>Photography Courtesy</h3>
+
+<p>Harmain</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+We look forward to celebrating
+this beautiful day with you.
+</p>
+
+<p class="signature">
+B & L
+</p>
+
+</footer>
+
+</div>
+
+<audio id="bgMusic" loop>
+<source src="music.mp3" type
