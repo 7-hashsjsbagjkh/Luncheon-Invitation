@@ -8,11 +8,11 @@ envelope.addEventListener("click", () => {
 
     envelope.classList.add("open");
 
+    createPetals();
+
     setTimeout(() => {
-
         screen.style.opacity = "0";
-
-    }, 1200);
+    }, 1500);
 
     setTimeout(() => {
 
@@ -24,7 +24,7 @@ envelope.addEventListener("click", () => {
 
         music.play().catch(()=>{});
 
-    }, 1800);
+    }, 2200);
 
 });
 
