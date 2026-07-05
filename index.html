@@ -1,213 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>B & L | Bridal Brunch & Luncheon</title>
+    <title>B & L | Bridal Brunch & Luncheon</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="theme-color" content="#f7f2ed">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- LOADER -->
+<!-- =====================================================
+BACKGROUND EFFECTS
+===================================================== -->
 
-<div id="loader">
-    <h1>B & L</h1>
-</div>
+<div id="petals"></div>
+<div id="sparkles"></div>
 
-<!-- ENVELOPE -->
+<!-- =====================================================
+OPENING ENVELOPE
+===================================================== -->
 
-<section id="envelopeScreen">
+<section id="openingScreen">
 
-    <div class="envelope">
+    <div class="opening-content">
 
-        <div class="letter"></div>
+        <div class="envelope" id="envelope">
 
-        <div class="flap"></div>
+            <div class="envelope-back"></div>
 
-        <div class="seal">
+            <div class="letter-preview">
+
+                <div class="preview-inner">
+
+                    <h2>B & L</h2>
+
+                    <p>Before Forever</p>
+
+                </div>
+
+            </div>
+
+            <div class="envelope-flap" id="flap"></div>
+
+            <div class="wax-seal" id="openInvitation">
+
+                ✦
+
+            </div>
+
+        </div>
+
+        <p class="tap-text">
+
+            Tap the Rose Gold Seal
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+MAIN INVITATION
+===================================================== -->
+
+<main id="mainInvitation">
+
+<!-- =====================================================
+COVER
+===================================================== -->
+
+<section class="hero fade-section">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <h1 class="logo">
             B & L
+        </h1>
+
+        <h2 class="subtitle">
+            Bridal Brunch & Luncheon
+        </h2>
+
+        <div class="divider"></div>
+
+        <h3 class="tagline">
+            Before Forever
+        </h3>
+
+        <div class="hosted">
+
+            <span>Hosted with Love by</span>
+
+            <h4>
+                Uzma &amp; Memoona
+            </h4>
+
+        </div>
+
+        <div class="scroll-indicator">
+
+            <span></span>
+
         </div>
 
     </div>
 
-    <p class="tapText">Tap the Wax Seal</p>
-
 </section>
 
-<!-- INVITATION -->
+<!-- =====================================================
+WELCOME
+===================================================== -->
 
-<main id="invitation"><!-- HERO -->
+<section class="content-section fade-section">
 
-<section class="hero">
+    <div class="glass-card">
 
-    <p class="monogram">B & L</p>
+        <h2 class="section-title">
 
-    <h1>
-        Bridal Brunch<br>
-        & Luncheon
-    </h1>
+            Welcome
 
-    <p class="subtitle">Before Forever</p>
+        </h2>
 
-    <div class="divider"></div>
+        <p class="section-text">
 
-    <p class="hosted">
-        Hosted with Love by
-    </p>
+            Join us for an elegant morning of laughter,
+            heartfelt conversations, joyful moments,
+            and beautiful memories as we celebrate
+            a special chapter before forever begins.
 
-    <h2>Uzma & Memoona</h2>
-
-    <p class="welcome">
-        You are warmly invited to an elegant afternoon
-        filled with love, laughter and beautiful memories
-        before a wonderful new chapter begins.
-    </p>
-
-    <button id="openDetails">
-        View Invitation
-    </button>
-
-</section>
-
-<!-- DETAILS -->
-
-<section class="details">
-
-    <h2>Ladies Only</h2>
-
-    <p>
-        Join us for a graceful afternoon of laughter,
-        heartfelt conversations and unforgettable memories.
-    </p>
-
-    <div class="card">
-
-        <p>📅 Tuesday, 21 July 2026</p>
-
-        <p>🕙 10:00 AM – 4:00 PM</p>
+        </p>
 
     </div>
 
 </section>
 
-<!-- COUNTDOWN -->
+<!-- =====================================================
+LADIES ONLY
+===================================================== -->
 
-<section class="countdown">
+<section class="content-section fade-section">
 
-    <h2>Countdown</h2>
+    <div class="glass-card">
 
-    <div class="timer">
+        <h2 class="section-title">
 
-        <div>
-            <span id="days">00</span>
+            Ladies Only
+
+        </h2>
+
+        <p class="section-text">
+
+            This celebration has been thoughtfully
+            planned as an intimate gathering exclusively
+            for the wonderful ladies who hold a special
+            place in our hearts.
+
+            We look forward to celebrating together in
+            elegance, warmth, and cherished company.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+EVENT DETAILS
+===================================================== -->
+
+<section class="content-section fade-section">
+
+    <h2 class="section-title center">
+
+        Event Details
+
+    </h2>
+
+    <div class="details-grid">
+
+        <div class="glass-card detail-card">
+
+            <h3>Date</h3>
+
+            <p>
+
+                Tuesday
+
+                <br>
+
+                21 July 2026
+
+            </p>
+
+        </div>
+
+        <div class="glass-card detail-card">
+
+            <h3>Time</h3>
+
+            <p>
+
+                10:00 AM
+
+                <br>
+
+                —
+
+                <br>
+
+                4:00 PM
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+COUNTDOWN
+===================================================== -->
+
+<section class="content-section fade-section">
+
+    <h2 class="section-title center">
+
+        Countdown
+
+    </h2>
+
+    <div class="countdown-container">
+
+        <div class="count-box">
+
+            <span id="days">
+
+                00
+
+            </span>
+
             <small>Days</small>
+
         </div>
 
-        <div>
-            <span id="hours">00</span>
+        <div class="count-box">
+
+            <span id="hours">
+
+                00
+
+            </span>
+
             <small>Hours</small>
+
         </div>
 
-        <div>
-            <span id="minutes">00</span>
+        <div class="count-box">
+
+            <span id="minutes">
+
+                00
+
+            </span>
+
             <small>Minutes</small>
+
         </div>
 
-        <div>
-            <span id="seconds">00</span>
+        <div class="count-box">
+
+            <span id="seconds">
+
+                00
+
+            </span>
+
             <small>Seconds</small>
+
         </div>
 
     </div>
 
-</section><!-- REVEAL CARDS -->
+</section>
 
-<section class="reveal">
+<!-- =====================================================
+REVEAL CARDS
+===================================================== -->
 
-<h2>Special Details</h2>
+<section class="content-section fade-section">
 
-<div class="revealCard" id="dressCard">
+    <h2 class="section-title center">
 
-<h3>Dress Code</h3>
+        Event Information
 
-<p id="dressText">Tap to Reveal</p>
+    </h2>
 
-</div>
+    <div class="flip-grid">
 
-<div class="revealCard" id="venueCard">
+        <!-- CARD -->
 
-<h3>Venue</h3>
+        <div class="flip-card">
 
-<p id="venueText">Tap to Reveal</p>
+            <div class="flip-inner">
 
-</div>
+                <div class="flip-front">
+
+                    <h3>
+
+                        Dress Code
+
+                    </h3>
+
+                    <p>
+
+                        Tap to Reveal
+
+                    </p>
+
+                </div>
+
+                <div class="flip-back">
+
+                    <h3>
+
+                        🤍 White
+
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="flip-card">
+
+            <div class="flip-inner">
+
+                <div class="flip-front">
+
+                    <h3>
+
+                        Venue
+
+                    </h3>
+
+                    <p>
+
+                        Tap to Reveal
+
+                    </p>
+
+                </div>
+
+                <div class="flip-back">
+
+                    <h3>
+
+                        📍 Khan Haveli
+
+                    </h3>
+
+                    <p>
+
+                        (Kajoor Wala Ghar)
+
+                    </p>
+
+                    <small>
+
+                        Hayyal Sharif
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- HOSTS -->
+<!-- =====================================================
+HOSTS
+===================================================== -->
 
-<section class="hosts">
+<section class="content-section fade-section">
 
-<h2>Hosted with Love</h2>
+    <h2 class="section-title center">
 
-<h3>Uzma & Memoona</h3>
+        Hosted with Love
 
-<br>
+    </h2>
 
-<h2>Event Host</h2>
+    <div class="host-grid">
 
-<h3>Hareem</h3>
+        <div class="glass-card">
 
-<br>
+            <h3>
 
-<h2>Photography Courtesy</h2>
+                Hosts
 
-<h3>Harmain</h3>
+            </h3>
+
+            <p>
+
+                Uzma &amp; Memoona
+
+            </p>
+
+        </div>
+
+        <div class="glass-card">
+
+            <h3>
+
+                Event Host
+
+            </h3>
+
+            <p>
+
+                Hareem
+
+            </p>
+
+        </div>
+
+        <div class="glass-card">
+
+            <h3>
+
+                Photography Courtesy
+
+            </h3>
+
+            <p>
+
+                Harmain
+
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- RSVP -->
+<!-- =====================================================
+RSVP
+===================================================== -->
 
-<section class="rsvp">
+<section class="content-section fade-section">
 
-<h2>RSVP</h2>
+    <div class="glass-card center-card">
 
-<a href="https://wa.me/923352455577">
-WhatsApp Us
-</a>
+        <h2 class="section-title">
+
+            RSVP
+
+        </h2>
+
+        <p class="section-text">
+
+            We'd be delighted to celebrate with you.
+
+        </p>
+
+        <a
+
+            class="luxury-btn"
+
+            href="https://wa.me/923352455577"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+        >
+
+            RSVP via WhatsApp
+
+        </a>
+
+    </div>
 
 </section>
 
-<!-- LOCATION -->
+<!-- =====================================================
+LOCATION
+===================================================== -->
 
-<section class="location">
+<section class="content-section fade-section">
 
-<h2>Venue Location</h2>
+    <div class="glass-card center-card">
 
-<a href="https://maps.google.com/?q=33.5404378,73.0068601" target="_blank">
-Get Directions
-</a>
+        <h2 class="section-title">
+
+            Location
+
+        </h2>
+
+        <p class="section-text">
+
+            Khan Haveli (Kajoor Wala Ghar)
+
+            <br>
+
+            Hayyal Sharif
+
+        </p>
+
+        <a
+
+            class="luxury-btn"
+
+            href="https://maps.google.com/?q=33.5404378,73.0068601"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+        >
+
+            Open in Google Maps
+
+        </a>
+
+    </div>
 
 </section>
+
+<!-- =====================================================
+FOOTER
+===================================================== -->
 
 <footer>
 
-B & L
+    <h2>
+
+        We look forward to celebrating with you
+
+    </h2>
+
+    <p>
+
+        Bridal Brunch & Luncheon
+
+    </p>
+
+    <div class="footer-line"></div>
+
+    <small>
+
+        With Love • Uzma & Memoona
+
+    </small>
 
 </footer>
 
 </main>
 
-<audio id="bgMusic" loop>
-<source src="music.mp3" type="audio/mpeg">
+<!-- =====================================================
+BACKGROUND MUSIC
+===================================================== -->
+
+<audio
+    id="bgMusic"
+    loop
+    preload="auto">
+
+    <source
+        src="music.mp3"
+        type="audio/mpeg">
+
 </audio>
 
 <script src="script.js"></script>
